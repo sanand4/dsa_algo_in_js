@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let data = [60, 30, 3, 9, 30, 10];
+      // let newElement = 24;
+      // let postion = 3;
+
+      /* for (let i = data.length - 1; i >= 0; i--) {
+        // console.log(data[i]);
+        if (i >= postion) {
+          data[i + 1] = data[i];
+          if (i == postion) {
+            data[i] = newElement;
+          }
+        }
+      }
+      console.warn(data);*/
+      function insertElement() {
+        let data = [60, 30, 3, 9, 30, 10];
+        let newElement = document.getElementById("newElement").value;
+        let postion = document.getElementById("newPostion").value;
+        for (let i = data.length - 1; i >= 0; i--) {
+          // console.log(data[i]);
+          if (i >= postion) {
+            data[i + 1] = data[i];
+            if (i == postion) {
+              data[i] = newElement;
+            }
+          }
+        }
+        console.log(data);
+        console.warn(data);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" name="" id="newElement" placeholder="enter element" />
+    <input type="text" name="" id="newPostion" placeholder="enter postion" />
+    <button onclick="insertElement()">insert element</button>
+  </body>
+</html>
