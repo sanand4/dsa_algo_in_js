@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // let data = [23, 45, 65, 64, 32, 47];
+
+      // console.warn(data);
+      // let postion = 4;
+      // for (let i = postion; i < data.length - 1; i++) {
+      //   data[i] = data[i + 1];
+      // }
+      // console.warn(data);
+
+      // data.length = data.length - 1;
+      // console.warn(data);
+
+      function deleteElements() {
+        let data = [23, 45, 65, 64, 32, 47];
+
+        console.warn(data);
+        let position = document.getElementById("position").value;
+        position = parseInt(position);
+        for (let i = position; i < data.length - 1; i++) {
+          data[i] = data[i + 1];
+        }
+        console.warn(data);
+
+        data.length = data.length - 1;
+        console.warn(data);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" name="" placeholder="enter the postion" id="position" />
+    <button onclick="deleteElements()">enter the number</button>
+  </body>
+</html>
