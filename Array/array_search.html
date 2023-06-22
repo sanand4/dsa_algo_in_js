@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   let data = [20, 2, 3, 56, 7, 6, 5];
+      //   let ietm = 526;
+      //   let index = undefined;
+      //   for (i = 0; i < data.length; i++) {
+      //     console.log(data[i]);
+
+      //     if (data[i] === ietm) {
+      //       index = i;
+      //       break;
+      //     }
+      //   }
+      //   // console.ware(data.indexOf(ietm)); by defelte function
+      //   console.warn(index);
+
+      function searchItems() {
+        let data = [20, 2, 3, 56, 7, 6, 5, 55];
+        let ietm = document.getElementById("Item").value;
+
+        let index = undefined;
+        for (i = 0; i < data.length; i++) {
+          if (data[i] === parseInt(ietm)) {
+            index = i;
+            alert("it is present");
+            break;
+          }
+        }
+        // console.ware(data.indexOf(ietm)); by defelte function
+        console.warn(index);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" name="" id="Item" />
+    <button onclick="searchItems()">Enter Item</button>
+  </body>
+</html>
